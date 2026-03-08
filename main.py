@@ -38,7 +38,7 @@ headers = {
 pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
 
 today = datetime(year=2026, month=3, day=6)
-
+# today = datetime.now()  for current date
 pixel_data = {
     "date":today.strftime("%Y%m%d"),
     "quantity":"15000",
@@ -56,7 +56,6 @@ new_pixel_data = {
 
 # response = requests.put(url=pixel_update_endpoint, json=new_pixel_data, headers=headers)
 # print(response.text)
-
 
 delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
 
